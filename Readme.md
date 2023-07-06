@@ -1,5 +1,7 @@
 # Gockerize - Build Dockerfiles for you Go projects
 This project is a very simple CLI tool for creating Dockerfiles for Go projects.  
+
+!["screen"](assets/screen.jpg.png)
   
 **Important**: It only uses the same template and may need to be adjusted according to your needs and structure.  
 I primarly made this for learning how to write CLI tools with the **Cobra library in Go**.  
@@ -35,3 +37,9 @@ I tested it on this common project layout, and it will work on similar layouts.
     ├── appconfig.go
     └── item.go
 ```
+
+## Build from source
+Clone repo and cd into it. Run ```go build```.  
+
+## CI/CD
+The GitHub Actions Workflow builds the Tool for Ubuntu & Windows and creates the release.
