@@ -30,10 +30,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.MY_SECRET }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
           body: |
-            Release ${{ github.sha }} for Linux and Windows
+            Release ${{ github.run_number }} for Linux and Windows
           draft: false
           prerelease: false
 
