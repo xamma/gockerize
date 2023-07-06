@@ -18,10 +18,16 @@ sudo chmod +x /usr/local/bin/gockerize
 ```
 
 ## How to run
+For creating Dockerfiles:
 ```
 gockerize generate --path .
 ```
 It will print if successful and output the Dockerfile in the current dir.  
+
+If you want to create Kubernetes manifests for different objects run:
+```
+gockerize k8s <objectname>
+```
 
 ## Where it works
 I tested it on this common project layout, and it will work on similar layouts.  
