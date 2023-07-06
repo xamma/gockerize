@@ -2,6 +2,7 @@
 [![Build and Release](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml/badge.svg?branch=master)](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml)  
 
 This project is a very simple CLI tool for creating Dockerfiles for Go projects.  
+It also lets you create Templates for Kubernetes-Objects.  
 
 !["screen"](assets/screen.jpg.png)
   
