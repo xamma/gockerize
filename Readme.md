@@ -8,8 +8,15 @@ This project is a very simple CLI tool for creating Dockerfiles for Go projects.
 **Important**: It only uses the same template and may need to be adjusted according to your needs and structure.  
 I primarly made this for learning how to write CLI tools with the **Cobra library in Go**.  
 
-## How to use
+## How to install
 Download the binary and execute it. Make sure to have the right permissions as well as the right operating system.  
+```
+curl -LO https://github.com/xamma/gockerize/releases/download/8/gockerize-linux-amd64
+sudo mv gockerize-linux-amd64 /usr/local/bin/gockerize
+sudo chmod +x /usr/local/bin/gockerize
+```
+
+## How to run
 ```
 gockerize generate --path .
 ```
