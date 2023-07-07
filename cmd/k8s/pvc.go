@@ -9,7 +9,7 @@ import (
 
 func NewK8SPvcCommand() *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "ingress",
+		Use:   "pvc",
 		Short: "Generate Kubernetes pvc manifest template",
 		Run: func(cmd *cobra.Command, args []string) {
 

@@ -33,6 +33,8 @@ Also, it allows you to create Kubernetes-templates for quick usage.
 		kubeMsg := color.New(color.FgCyan).Sprintf("To generate a template for a K8s object, use the 'k8s <objectname>' subcommand.")
 		color.New(color.Bold).Println(kubeMsg)
 		fmt.Println()
+		fmt.Println("For more information, use the 'k8s --help' command.")
+		fmt.Println()
 		discMsg := color.New(color.FgBlue).Sprintf("Visit my Website: https://xamma.github.io")
 		color.New(color.FgMagenta).Println(discMsg)
 	},
