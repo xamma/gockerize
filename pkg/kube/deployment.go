@@ -28,6 +28,13 @@ spec:
         ports:
         - containerPort: 8000
           name: port-name
+        volumeMounts:
+          - name: volume-name
+            mountPath: /app/path
+      volumes:
+        - name: volume-name
+          persistentVolumeClaim:
+            claimName: volume-claim-name
       restartPolicy: Always
 `
     return manifest, nil
