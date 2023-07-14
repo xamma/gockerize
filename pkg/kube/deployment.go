@@ -19,18 +19,28 @@ spec:
         app: label
     spec:
       containers:
-      - name: container-name
-        image: registry.io/image-name:latest
-        imagePullPolicy: Always
-        envFrom:
-        - configMapRef:
-            name: my-configmap
-        ports:
-        - containerPort: 8000
-          name: port-name
-        volumeMounts:
-          - name: volume-name
-            mountPath: /app/path
+        - name: container-name
+          image: registry.io/image-name:latest
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: my-configmap
+            - secretRef:
+                name: my-secret
+          env:
+            - name: VAULT_SERVICE_NAME
+              value: vault.ns.svc.cluster.local
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: github-token
+                  key: token
+          ports:
+            - containerPort: 8000
+              name: port-name
+          volumeMounts:
+            - name: volume-name
+              mountPath: /app/path
       volumes:
         - name: volume-name
           persistentVolumeClaim:

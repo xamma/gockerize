@@ -11,11 +11,11 @@ metadata:
   labels:
     app: label
 spec:
-  # storageClassName: local-path
   # storageClassName: longhorn
+  # storageClassName: local-path
   storageClassName: openebs-hostpath
   accessModes:
-  - ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi

@@ -10,18 +10,18 @@ metadata:
   namespace: your-ns
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-	kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: service-name
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: service-name
+                port:
+                  number: 80
 `
     return manifest, nil
 }

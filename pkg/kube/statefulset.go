@@ -20,25 +20,25 @@ spec:
         app: label
     spec:
       containers:
-      - name: minio
-        image: bitnami/minio
-        ports:
-        - containerPort: 9000
-          name: minio-port
-        volumeMounts:
-        - name: minio-vol
-          mountPath: /data
+        - name: minio
+          image: bitnami/minio
+          ports:
+            - containerPort: 9000
+              name: minio-port
+          volumeMounts:
+            - name: minio-vol
+              mountPath: /data
   volumeClaimTemplates:
-  - metadata:
-      name: minio-vol
-    spec:
-      # storageClassName: local-path
-      storageClassName: openebs-hostpath
-      accessModes:
-        - ReadWriteOnce
-      resources:
-        requests:
-          storage: 1Gi
+    - metadata:
+        name: minio-vol
+      spec:
+        # storageClassName: local-path
+        storageClassName: openebs-hostpath
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 1Gi
 `
     return manifest, nil
 }

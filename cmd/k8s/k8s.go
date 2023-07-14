@@ -14,7 +14,7 @@ This command generates Kubernetes manifests for various Kubernetes Objects.
 You can pass the type of object you want to create.
 
 Available Objects: configmap, deployment, ingress, namespace, pvc, service,
-statefulset
+statefulset, secret
 
 Example usage:
   gockerize k8s service
@@ -28,6 +28,7 @@ Example usage:
 	cmd.AddCommand(NewK8SConfigmapCommand())
 	cmd.AddCommand(NewK8SPvcCommand())
 	cmd.AddCommand(NewK8SStatefulsetCommand())
+	cmd.AddCommand(NewK8SSecretCommand())
 	// Add more Kubernetes object commands here
 
 	return cmd

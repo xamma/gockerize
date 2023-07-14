@@ -13,10 +13,10 @@ spec:
     app: label
   type: ClusterIP
   ports:
-  - name: portname
-    protocol: TCP
-    port: 9000
-    targetPort: 9000
+    - name: portname
+      protocol: TCP
+      port: 9000
+      targetPort: 9000
 `
     return manifest, nil
 }
