@@ -1,12 +1,12 @@
 # Gockerize - Build Dockerfiles for you Go projects
 [![Build and Release](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml/badge.svg?branch=master)](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml)  
 
-This project is a very simple CLI tool for creating Dockerfiles for Go projects.  
+This project is a very simple CLI tool for creating Dockerfiles for Go and Python projects.  
 It also lets you create Templates for Kubernetes-Objects.  
 
 !["screen"](assets/screen.jpg)
   
-**Important**: It only uses the same template and may need to be adjusted according to your needs and structure.  
+**Important**: It only uses the same template-structure and may need to be adjusted according to your needs and projects.  
 I primarly made this for learning how to write CLI tools with the **Cobra library in Go**.  
 
 ## How to install
@@ -20,7 +20,7 @@ sudo chmod +x /usr/local/bin/gockerize
 ## How to run
 For creating Dockerfiles:
 ```
-gockerize generate --path .
+gockerize generate
 ```
 It will print if successful and output the Dockerfile in the current dir.  
 
@@ -53,6 +53,7 @@ I tested it on this common project layout, and it will work on similar layouts.
     ├── appconfig.go
     └── item.go
 ```
+For the Python Dockerfiles you NEED to have an requirements.txt. It will search for it in the directory.  
 
 ## Build from source
 Clone repo and cd into it. Run ```go build```.  
