@@ -1,4 +1,4 @@
-# Gockerize - Build Dockerfiles for you Go projects
+# Gockerize - Dockerfiles and K8s-Templates for your projects
 [![Build and Release](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml/badge.svg?branch=master)](https://github.com/xamma/gockerize/actions/workflows/build-and-release.yaml)  
 
 This project is a very simple CLI tool for creating Dockerfiles for Go and Python projects.  
